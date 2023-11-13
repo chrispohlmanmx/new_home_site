@@ -1,0 +1,22 @@
+---
+const platform = "github";
+const githubUsername = "chrispohlmanmx";
+
+const socialLinks = [{"site": {
+    "name": "github",
+    "username": "chrispohlmanmx",
+    "baseUrl": "https://www.github.com/"
+}}, {
+    "site": {
+        "name": "linkedIn",
+        "username": "chrispohlmanmx",
+        "baseUrl": "https://www.linkedin.com/in/"
+    }
+}]
+---
+
+<footer>
+  <ul>
+    {socialLinks.map((social) => <li class="social"><a href={`${social.site.baseUrl}${social.site.username}`}>{social.site.name}</a></li>)}
+  </ul>
+</footer>
