@@ -24,6 +24,15 @@ a {
     margin: 0 0.25rem;
 }
 
+html.dark {
+    background-color: #0d0950;
+    color: #fff;
+}
+
+.dark .nav-links a {
+    color: #fff;
+}
+
 /* nav styles */
 .hamburger {
     padding-right: 20px;
