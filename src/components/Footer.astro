@@ -1,0 +1,31 @@
+---
+const platform = "github";
+const githubUsername = "chrispohlmanmx";
+
+import Social from "./Social.astro";
+
+const socialLinks = [{"site": {
+    "name": "github",
+    "username": "chrispohlmanmx",
+    "baseUrl": "https://www.github.com/"
+}}, {
+    "site": {
+        "name": "linkedIn",
+        "username": "chrispohlmanmx",
+        "baseUrl": "https://www.linkedin.com/in/"
+    }
+}]
+---
+<style>
+  footer {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+</style>
+
+
+<footer>
+  <Social platform="github" username="chrispohlmanmx" baseUrl="https://www.github.com/" />
+  <Social platform="linkedIn" username="chrispohlmanmx" baseUrl="https://www.linkedin.com/in/" />
+</footer>
