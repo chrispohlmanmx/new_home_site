@@ -1,0 +1,50 @@
+---
+import "../styles/global.css";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const pageTitle = "Contact Me";
+const contactReasonOptions = [
+    "Invitation to apply for a job",
+    "Freelance Job offer",
+    "Invite to a conference",
+    "Other",
+];
+---
+
+<BaseLayout pageTitle={pageTitle}>
+    <form
+        method="POST"
+        action="https://chrispymx93-untitled_apricotChameleon.web.val.run"
+    >
+        <div>
+            <label for="name">Your name:</label>
+            <input type="text" name="name" id="name" required />
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required />
+        </div>
+        <div>
+            <label for="reason-for-contact">Reason for contact:</label>
+            <select name="reason-for-contact" id="reason-for-contact" required>
+                {
+                    contactReasonOptions.map((contactReason) => (
+                        <option value={contactReason}>{contactReason}</option>
+                    ))
+                }
+            </select>
+        </div>
+        <div>
+            <label for="additional-comments">Additional Comments:</label>
+            <textarea
+                id="addtional-comments"
+                name="additional-comments"
+                rows="5"
+                cols="40"></textarea>
+        </div>
+        <div>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </div>
+    </form>
+</BaseLayout>
