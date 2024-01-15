@@ -25,7 +25,7 @@ const projectsCollection = defineCollection({
             platform: z.string(),
         }),
         description: z.string(),
-        url: z.string().nullable(),
+        url: z.nullable(z.string()),
         languages: z.array(z.string()),
         contributors: z.array(
             z.object({
