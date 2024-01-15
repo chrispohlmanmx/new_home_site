@@ -38,7 +38,7 @@ const projectsCollection = defineCollection({
             url: z.string(),
             alt: z.string(),
         }),
-        finished: z.boolean(),
+        isFinished: z.boolean(),
         isLargeProject: z.boolean(),
     }),
 });

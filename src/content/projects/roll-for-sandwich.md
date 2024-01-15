@@ -20,5 +20,5 @@ image:
     url: "https://docs.astro.build/assets/full-logo-light.png"
     alt: "The full Astro logo."
 isLargeProject: true
-finished: true
+isFinished: true
 ---
