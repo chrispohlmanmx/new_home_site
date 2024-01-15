@@ -17,7 +17,7 @@ const postsCollection = defineCollection({
 });
 
 const projectsCollection = defineCollection({
-    type: "data",
+    type: "content",
     schema: z.object({
         name: z.string(),
         repo: z.object({
@@ -27,12 +27,19 @@ const projectsCollection = defineCollection({
         description: z.string(),
         url: z.string().nullable(),
         languages: z.array(z.string()),
-        contributors: z.array(z.string()),
+        contributors: z.array(
+            z.object({
+                name: z.string(),
+                url: z.string().nullable(),
+            })
+        ),
         otherTechUsed: z.array(z.string()).nullable(),
         image: z.object({
             url: z.string(),
             alt: z.string(),
         }),
+        finished: z.boolean(),
+        isLargeProject: z.boolean(),
     }),
 });
 

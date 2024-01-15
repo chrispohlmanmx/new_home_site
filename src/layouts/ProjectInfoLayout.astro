@@ -6,13 +6,45 @@ const { frontmatter } = Astro.props;
 <BaseLayout pageTitle={frontmatter.name}>
     <p><em>{frontmatter.description}</em></p>
 
-    <p>Contributors {frontmatter.contributors[0]}</p>
+    <div class="contributors">
+        Project created by:
+        {
+            frontmatter.contributors.map((contributor: any) => (
+                <div class="contributor">
+                    <a href={contributor.url}>{contributor.name}</a>{" "}
+                </div>
+            ))
+        }
+    </div>
 
     <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
 
-    <a href={frontmatter.repo.url} class="repo-link"
-        >View source code on {frontmatter.repo.platform}</a
-    >
+    <div class="project-links">
+        <a href={frontmatter.url} class="project-url"
+            >{frontmatter.name} Website</a
+        >
+        <a href={frontmatter.repo.url} class="repo-link"
+            >View source code on {frontmatter.repo.platform}</a
+        >
+    </div>
+
+    <p>Main technologies and languages used:</p>
+    <div class="languages">
+        {
+            frontmatter.languages.map((language: string) => (
+                <div class="language">{language}</div>
+            ))
+        }
+    </div>
+
+    <p>Other technologies used:</p>
+    <div class="other-techs">
+        {
+            frontmatter.otherTechUsed.map((tech: string) => (
+                <div class="tech">{tech}</div>
+            ))
+        }
+    </div>
 
     <slot />
 </BaseLayout>
@@ -21,12 +53,14 @@ const { frontmatter } = Astro.props;
         color: #00539f;
     }
 
-    .tags {
+    .languages,
+    .other-techs {
         display: flex;
         flex-wrap: wrap;
     }
 
-    .tag {
+    .language,
+    .tech {
         margin: 0.25em;
         border: dotted 1px #a1a1a1;
         border-radius: 0.5em;

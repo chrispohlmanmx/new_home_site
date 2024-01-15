@@ -8,10 +8,17 @@ description:
     random sandwich"
 url: "https://chimerical-rolypoly-ebe7d4.netlify.app/"
 languages: ["React", "Javascript", "HTML", "CSS"]
-contributors: ["Chris Pohlman"]
+contributors:
+    [
+        {
+            name: "Chris Pohlman",
+            url: "https://www.linkedin.com/in/chrispohlmanmx",
+        },
+    ]
 otherTechUsed: ["Vite", "Netlify"]
 image:
     url: "https://docs.astro.build/assets/full-logo-light.png"
     alt: "The full Astro logo."
-tags: ["react", "frontend", "SPA", ""]
+isLargeProject: true
+finished: true
 ---
