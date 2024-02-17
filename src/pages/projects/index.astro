@@ -1,0 +1,23 @@
+---
+import "../../styles/global.css";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+const allPosts = await getCollection("projects");
+
+const pageTitle = "Chrispy Project Menu";
+---
+
+<BaseLayout pageTitle={pageTitle}>
+    <section>
+        <ul>
+            {
+                allPosts.map((project) => (
+                    <li>
+                        {project.data.name} -
+                        <a href={`/projects/${project.slug}`}>Link</a>
+                    </li>
+                ))
+            }
+        </ul>
+    </section>
+</BaseLayout>
