@@ -1,5 +1,5 @@
 ---
-name: "What the Face"
+name: "Space Idle Game"
 repo:
     url: "https://gitlab.com/chasevanblair/gamewise"
     platform: "Gitlab"
