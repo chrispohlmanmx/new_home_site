@@ -1,23 +1,50 @@
 ---
 import "../../styles/global.css";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import { getCollection } from "astro:content";
-const allPosts = await getCollection("projects");
+import { getCollection, getEntries } from "astro:content";
+const finishedProjects = await getCollection("projects", ({ data }) => {
+    return data.isFinished === true;
+});
 
+const largeProjects = finishedProjects.filter(
+    (project) => project.data.isLargeProject === true
+);
+const smallProjects = finishedProjects.filter(
+    (project) => project.data.isLargeProject !== true
+);
 const pageTitle = "Chrispy Project Menu";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-    <section>
+    <section class="small-projects-section">
+        <h2>Small Bites</h2>
         <ul>
             {
-                allPosts.map((project) => (
+                smallProjects.map((project) => (
                     <li>
-                        {project.data.name} -
-                        <a href={`/projects/${project.slug}`}>Link</a>
+                        <a href={`/projects/${project.slug}`}>
+                            {project.data.name}
+                        </a>
                     </li>
                 ))
             }
         </ul>
+    </section>
+    <section class="large-projects-section">
+        <h2>Main Entrees</h2>
+        <ul>
+            {
+                largeProjects.map((project) => (
+                    <li>
+                        <a href={`/projects/${project.slug}`}>
+                            {project.data.name}
+                        </a>
+                    </li>
+                ))
+            }
+        </ul>
+    </section>
+    <section class="build-your-own">
+        <h2>Build your own</h2>
     </section>
 </BaseLayout>
