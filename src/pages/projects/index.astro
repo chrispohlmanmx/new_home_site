@@ -15,73 +15,98 @@ const smallProjects = finishedProjects.filter(
 const pageTitle = "Chrispy Project Menu";
 ---
 
+<style>
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 100%;
+    }
+
+    .small-projects-section,
+    .large-projects-section,
+    .build-your-own {
+        grid-column: 1 / span 3;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        border-bottom: 1px solid black;
+    }
+
+    .section-heading {
+        grid-column: 1 / span 3;
+        text-align: center;
+    }
+
+    h2 {
+        grid-column: 1 / span 3;
+    }
+</style>
 <BaseLayout pageTitle={pageTitle}>
-    <section class="small-projects-section">
-        <h2>Small Bites</h2>
-        <ul>
+    <main class="container">
+        <section class="small-projects-section">
+            <h2 class="section-heading">Small Bites</h2>
+
             {
                 smallProjects.map((project) => (
-                    <li>
+                    <div>
                         <a href={`/projects/${project.slug}`}>
                             {project.data.name}
                         </a>
-                    </li>
+                    </div>
                 ))
             }
-        </ul>
-    </section>
-    <section class="large-projects-section">
-        <h2>Main Entrees</h2>
-        <ul>
+        </section>
+        <section class="large-projects-section">
+            <h2 class="section-heading">Main Entrees</h2>
+
             {
                 largeProjects.map((project) => (
-                    <li>
+                    <div>
                         <a href={`/projects/${project.slug}`}>
                             {project.data.name}
                         </a>
-                    </li>
+                    </div>
                 ))
             }
-        </ul>
-    </section>
-    <section class="build-your-own">
-        <h2>Build your own</h2>
-        <div>
-            <h3>Backend Technologies</h3>
-            <ul>
-                <li>Python</li>
-                <li>Perl</li>
-                <li>C#</li>
-                <li>Java</li>
-                <li>SQL</li>
-                <li>Bash</li>
-                <li>Flask</li>
-            </ul>
-        </div>
-        <div>
-            <h3>Frontend Technologies</h3>
-            <ul>
-                <li>Javascript</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Bootstrap</li>
-                <li>Vue</li>
-                <li>React</li>
-                <li>JQuery</li>
-            </ul>
-        </div>
-        <div>
-            <h3>Everything Else</h3>
-            <ul>
-                <li>Astro</li>
-                <li>Django</li>
-                <li>Vercel</li>
-                <li>S3</li>
-                <li>Netlify</li>
-                <li>Git</li>
-                <li>GitLab</li>
-                <li>Github</li>
-            </ul>
-        </div>
-    </section>
+        </section>
+        <section class="build-your-own">
+            <h2 class="section-heading">Build your own</h2>
+            <div class="grid-section">
+                <h3>Backend Technologies</h3>
+                <div>
+                    <div>Python</div>
+                    <div>Perl</div>
+                    <div>C#</div>
+                    <div>Java</div>
+                    <div>SQL</div>
+                    <div>Bash</div>
+                    <div>Flask</div>
+                </div>
+            </div>
+            <div class="grid-section">
+                <h3>Frontend Technologies</h3>
+                <div>
+                    <div>Javascript</div>
+                    <div>HTML</div>
+                    <div>CSS</div>
+                    <div>Bootstrap</div>
+                    <div>Vue</div>
+                    <div>React</div>
+                    <div>JQuery</div>
+                </div>
+            </div>
+            <div class="grid-section">
+                <h3>Everything Else</h3>
+                <div>
+                    <div>Astro</div>
+                    <div>Django</div>
+                    <div>Vercel</div>
+                    <div>S3</div>
+                    <div>Netlify</div>
+                    <div>Git</div>
+                    <div>GitLab</div>
+                    <div>Github</div>
+                </div>
+            </div>
+        </section>
+    </main>
 </BaseLayout>
