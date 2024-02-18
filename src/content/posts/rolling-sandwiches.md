@@ -1,4 +1,5 @@
 ---
+pubDate: 2022-10-27
 ---
 
 [Share Christopher’s Newsletter](https://christopherpohlman.substack.com/?utm_source=substack&utm_medium=email&utm_content=share&action=share)

@@ -1,4 +1,5 @@
 ---
+pubDate: 2022-10-13
 ---
 
 [Subscribe now](https://christopherpohlman.substack.com/subscribe?)
