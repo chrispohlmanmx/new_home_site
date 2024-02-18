@@ -2,7 +2,7 @@
 title: The Importance of Failure
 author: Chris Pohlman
 description:
-    Failure is the best way to learn, and you can and should try to optimize it
+    Failure is the best way to learn, you can and should try to optimize it
 tags:
     [
         "failure",
@@ -11,6 +11,7 @@ tags:
         "procedural-content-generation",
         "cats",
         "coding",
+        "substack",
     ]
 image:
     url: /project-images/cooking-for-engineers.webp
@@ -80,7 +81,7 @@ to the decision, and reflect on the outcomes.
 This week my girlfriend and I welcomed two new members into our family, Azula
 and Bumi
 
-![Two kittens, 1 male orange tabby, Bumi and one tortosie shell female, Azula](project-images/bumi-and-azula.webp)
+![Two kittens, 1 male orange tabby, Bumi and one tortosie shell female, Azula](/project-images/bumi-and-azula.png)
 
 Azula is the tortoise shell looking girl and Bumi is the tabby boy. Our older
 cats are still learning to love them but they are starting to come around.
