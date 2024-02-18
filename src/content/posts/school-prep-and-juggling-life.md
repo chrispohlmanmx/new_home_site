@@ -4,7 +4,7 @@ author: Chris Pohlman
 description:
     "prepping for a coming semester, and some tips on finding time to work"
 image:
-    url: "../../../public/project-images/make-time.jpg"
+    url: "/project-images/make-time.jpg"
     alt: "image of the book cover for a book called Make Time"
 pubDate: 2022-08-25
 tags: ["school", "substack", "work-life balance"]
