@@ -1,8 +1,12 @@
 ---
+title: Embracing Limitations
+description: Sometimes rules and limits encourage creativity
+tags: ["creativity", "learning", "limits", "coding"]
+image:
+    url: /project-images/m-coding-logo.jpg
+    alt: logo for a youtube channel called mCoding
 pubDate: 2022-10-13
 ---
-
-[Subscribe now](https://christopherpohlman.substack.com/subscribe?)
 
 ## You’re only human after all
 
@@ -82,12 +86,6 @@ If you run this then you will key the following
 
 # Pick of the Week - [mCoding Youtube Channel](https://www.youtube.com/c/mCodingWithJamesMurphy)
 
-[
-
-![](https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/9502f6fa-63a6-4755-a945-cffa00d89077_88x88.jpeg)
-
-](https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F9502f6fa-63a6-4755-a945-cffa00d89077_88x88.jpeg)
-
 [mCoding](https://www.youtube.com/c/mCodingWithJamesMurphy) is a YouTube channel
 from James Murphy focused on python, c++, and math. While that might not
 immediately have you jumping out your chair with excitement, it does do a great
@@ -96,6 +94,3 @@ in ways that are easy to understand even for novices in the language. If you
 want to see some deep dives into the specifics of python and how things that
 might seem very simple on the surface can actually be much odder than you’d
 expect under the hood, this might be the channel for you.
-
-Thanks for reading Christopher’s Newsletter! Subscribe for free to receive new
-posts and support my work.

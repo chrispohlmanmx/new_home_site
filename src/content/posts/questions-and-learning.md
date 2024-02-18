@@ -1,4 +1,10 @@
 ---
+title: Questions and Learning
+description: Its normal to realize you know less as you learn more
+tags: ["substack", "learning", "coding"]
+image:
+    url: /project-images/morning-brew.png
+    alt: logo for a newsletter called morning brew
 pubDate: 2022-11-03
 ---
 
@@ -77,18 +83,9 @@ bug fixing to get it working the way I intended.
 
 ## Pick of the Week - Morning Brew
 
-[
-
-![](https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/ef3f6cac-9a4d-4a38-9d27-1397f4c5690c_1200x1200.png)
-
-](https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fef3f6cac-9a4d-4a38-9d27-1397f4c5690c_1200x1200.png)
-
 [Morning Brew](https://www.morningbrew.com/daily/r?kid=de8ca90d) is another
 newsletter focused on bringing you a concise collection of news stories that are
 primarily relevant to the world of business in the most general sense. You also
 get a quick snapshot of the current state of the stock market and the writing
 tends to be pretty fun. The company behind Morning Brew also puts out a few
 other newsletters focused on more specific things such as emerging tech!
-
-Thanks for reading Christopher’s Newsletter! Subscribe for free to receive new
-posts and support my work.

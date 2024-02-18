@@ -1,8 +1,12 @@
 ---
+title: Rolling Sandwiches and creating silly things
+description: It's ok to just make something ridiculous
+tags: ["creativity", "learning", "coding", "substack"]
+image:
+    url: /project-images/syntax-logo.png
+    alt: Logo for a web development podcast called Syntax
 pubDate: 2022-10-27
 ---
-
-[Share Christopher’s Newsletter](https://christopherpohlman.substack.com/?utm_source=substack&utm_medium=email&utm_content=share&action=share)
 
 # Make your silly ideas
 
@@ -24,15 +28,6 @@ very simple and easy to describe and understand goal for the development which
 made it a perfect tutorial. You can check out the final product
 [here](https://roundest.t3.gg/). This ended up giving me the little bit of extra
 motivation I needed to make my own website based on a silly idea.
-
-Thanks for reading Christopher’s Newsletter! Subscribe for free to receive new
-posts and support my work.
-
-[
-
-![](https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/1b60eb9d-dc28-4403-9c2a-124bf4906df2_250x250.webp)
-
-](https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F1b60eb9d-dc28-4403-9c2a-124bf4906df2_250x250.webp)
 
 ## What I’m Coding
 
@@ -156,12 +151,6 @@ you’re good to go.
     }
 
 ## Pick of the Week - [Syntax.fm](https://syntax.fm/)
-
-[
-
-![](https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/665c576e-3c64-46c1-80db-48cfd036ddb3_899x856.png)
-
-](https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F665c576e-3c64-46c1-80db-48cfd036ddb3_899x856.png)
 
 Syntax is a podcast by developers Wes Bos and Scott Tolinski that focuses on Web
 development. Most of the episodes feature the two talking to each other about
