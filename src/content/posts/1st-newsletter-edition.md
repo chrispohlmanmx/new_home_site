@@ -4,7 +4,7 @@ pubDate: 2022-08-11
 description: "My first substack newsletter post"
 author: "Chris Pohlman"
 image:
-    url: "https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/7b3eb2ba-a3b1-48a1-8476-15896e734d71_1280x1896.jpeg"
+    url: "../../../public/project-images/close-enough.jpg"
     alt: "Image of a show called Close Enough on HBO"
 tags:
     [
