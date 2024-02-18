@@ -1,8 +1,15 @@
 ---
+title: Generating New Ideas
+author: Chris Pohlman
+description: Some ideas on how to have ideas
 pubDate: 2022-10-06
+image:
+    url: /project-images/baking-steel.jpg
+    alt:
+        a picture of a baking steel, a large square piece of steel about a half
+        inch thick meant to sit in a oven
+tags: ["ideas", "creativity", "learning", "coding"]
 ---
-
-[Subscribe now](https://christopherpohlman.substack.com/subscribe?)
 
 # Lacking Ideas? Just steal some
 
@@ -44,12 +51,6 @@ new and if you want to see cases of it being used search for
 
 ## Pick of the Week - [Baking Steel](https://bakingsteel.com/)
 
-[
-
-![](https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/6aec1888-7952-4ec9-8b07-9716a5e28ef4_864x576.jpeg)
-
-](https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F6aec1888-7952-4ec9-8b07-9716a5e28ef4_864x576.jpeg)
-
 A [baking steel](https://bakingsteel.com/) is basically a solid steel version of
 a pizza stone, but the nature of it being all steel means it can be used for a
 lot more. It can be placed in your oven and will transform it into a very close
@@ -60,7 +61,3 @@ stovetop or grill and use it like a flattop griddle. Perfect for making smash
 burgers, pancakes, or any of your diner favorites. I have the original from the
 link and like it a lot but there are a lot of other brands out there as well. As
 long as the one you get is made of solid steel it will likely serve you well.
-
-[Subscribe now](https://christopherpohlman.substack.com/subscribe?)
-
-[Share Christopher’s Newsletter](https://christopherpohlman.substack.com/?utm_source=substack&utm_medium=email&utm_content=share&action=share)
