@@ -5,11 +5,14 @@ import BlogPost from "../components/BlogPost.astro";
 import { getCollection } from "astro:content";
 const allPosts = await getCollection("posts");
 
-const pageTitle = "Chrispy Blogging";
+const pageTitle = "Chrispy garden";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-    <p>This is where I will post about my journey learning Astro.</p>
+    <p>
+        The home for my blog posts, notes, thoughts, and opinions I may or may
+        not be qualified to share
+    </p>
     <ul>
         {
             allPosts.map((post) => (
