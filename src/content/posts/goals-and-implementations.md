@@ -1,7 +1,13 @@
 ---
+title: Goals and Implementations
+author: Chris Pohlman
+description: Having good goals versus just having goals
+tags: ["learning", "coding", "substack", "goals"]
+image:
+    url: /project-images/new-frame-plus.jpg
+    alt: Logo for the youtube channel New Frame Plus
+pubDate: 2022-09-29
 ---
-
-[Subscribe now](https://christopherpohlman.substack.com/subscribe?)
 
 ## I’ve never been good at Goals
 
@@ -25,14 +31,6 @@ There are a few ways to go about setting good goals but a common framework for
 it is
 [SMART](https://www.atlassian.com/blog/productivity/how-to-write-smart-goals).
 Goals should be Specific, Measurable, Achievable, Relevant, and Time-bound.
-
-[
-
-![](https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/b6b7993e-0871-4d71-8a9b-a3eba6b5ff32_792x341.png)
-
-](https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fb6b7993e-0871-4d71-8a9b-a3eba6b5ff32_792x341.png)
-
-###### Dungdm93, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via Wikimedia Commons
 
 This means that reading 3 books in a month might be a good goal because it is
 specific, its measurable, its achievable, and its Time-bound. But in my example
@@ -68,12 +66,6 @@ to do that, I guess I’ll just do it tomorrow.
 
 ## Pick of the Week - [New Frame Plus](https://www.youtube.com/c/NewFramePlus/featured)
 
-[
-
-![](https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/538af07a-2ac7-4304-8283-b63e102cbdd2_1280x720.jpeg)
-
-](https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F538af07a-2ac7-4304-8283-b63e102cbdd2_1280x720.jpeg)
-
 [New Frame Plus](https://www.youtube.com/c/NewFramePlus/featured) is a YouTube
 channel created by Daniel Floyd a professional animator that is all about video
 game animation. He doesn’t release videos on the channel frequently but when he
@@ -81,7 +73,3 @@ does they are informative, entertaining, and packed full of nerdy details and
 excitement about games and the animations that make them feel great to play. If
 you enjoy video games and want to dive into one of the key things that make them
 tick, I’d highly recommend checking it out.
-
-[Share Christopher’s Newsletter](https://christopherpohlman.substack.com/?utm_source=substack&utm_medium=email&utm_content=share&action=share)
-
-[Subscribe now](https://christopherpohlman.substack.com/subscribe?)
