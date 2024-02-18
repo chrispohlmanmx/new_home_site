@@ -3,7 +3,7 @@ title: Digital Organization and Hello World Season
 author: Chris Pohlman
 description: "Automating some digital organization tasks, and starting school"
 image:
-    url: "../../../public/project-images/60-songs-cranberries.webp"
+    url: "/project-images/60-songs-cranberries.webp"
     alt:
         "Cover image from a podcast called 60 songs that explain the 90's,
         episode The Cranberries: Zombie"

@@ -5,7 +5,7 @@ description:
     "A short blog about games featuring procedural content generation and
     learning to make a resume"
 image:
-    url: "../../../public/project-images/developer-tea.jpg"
+    url: "/project-images/developer-tea.jpg"
     alt: "Logo image for the Developer tea podcast"
 pubDate: 2022-08-18
 tags:
