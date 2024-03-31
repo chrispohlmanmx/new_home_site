@@ -17,8 +17,8 @@ contributors:
     ]
 otherTechUsed: ["Vite", "Netlify"]
 image:
-    url: "https://docs.astro.build/assets/full-logo-light.png"
-    alt: "The full Astro logo."
+    url: "/project-images/roll-for-sandwich.png"
+    alt: "Sketch of a sandwich"
 isLargeProject: true
 isFinished: true
 ---

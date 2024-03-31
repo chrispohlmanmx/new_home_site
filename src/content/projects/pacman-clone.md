@@ -21,7 +21,7 @@ contributors:
     ]
 otherTechUsed: []
 image:
-    url: "https://docs.astro.build/assets/full-logo-light.png"
+    url: "/project-images/pac-man.png"
     alt: "The full Astro logo."
 isLargeProject: true
 isFinished: true
