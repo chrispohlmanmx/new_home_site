@@ -10,3 +10,8 @@ image:
     alt: "test" 
 pubDate: 2024-03-30
 ---
+# Re-writing this website in Astro
+
+## What was it before?
+
+## Why Astro?
