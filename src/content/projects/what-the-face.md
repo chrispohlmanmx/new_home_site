@@ -34,8 +34,8 @@ contributors:
     ]
 otherTechUsed: ["Vite", "Netlify", "Render", "Tailwind", "PyTorch"]
 image:
-    url: "https://docs.astro.build/assets/full-logo-light.png"
-    alt: "The full Astro logo."
+    url: "/project-images/what-the-face.png"
+    alt: "Sketch of 3 different faces with different emotions"
 isLargeProject: true
 isFinished: true
 ---
