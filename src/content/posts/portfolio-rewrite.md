@@ -6,7 +6,7 @@ description:
     Astro.js"
 tags: ["learning", "coding", "astro", "react", "portfolio"]
 image:
-    url: ''
-    alt: '' 
+    url: "https://example.com"
+    alt: "test" 
 pubDate: 2024-03-30
 ---
