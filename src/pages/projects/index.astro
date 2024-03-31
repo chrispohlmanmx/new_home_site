@@ -49,7 +49,7 @@ const pageTitle = "Chrispy Project Menu";
 
             {
                 smallProjects.map((project) => (
-                    <ProjectCard name={project.data.name} description={project.data.description} image={project.data.image.url} />
+                    <ProjectCard slug={project.slug} name={project.data.name} description={project.data.description} image={project.data.image.url} />
                 ))
             }
         </section>
