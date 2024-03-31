@@ -17,8 +17,8 @@ contributors:
     ]
 otherTechUsed: []
 image:
-    url: "https://docs.astro.build/assets/full-logo-light.png"
-    alt: "The full Astro logo."
+    url: "/project-images/auto-download-thing.png"
+    alt: "Sketch of a folder"
 isLargeProject: false
 isFinished: true
 ---
