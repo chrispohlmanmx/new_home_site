@@ -33,7 +33,7 @@ contributors:
     ]
 otherTechUsed: ["Vite", "Netlify", "MongoDB", "Material UI"]
 image:
-    url: "https://docs.astro.build/assets/full-logo-light.png"
+    url: "/project-images/space-idle-game.png"
     alt: "The full Astro logo."
 isLargeProject: true
 isFinished: true
