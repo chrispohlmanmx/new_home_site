@@ -6,7 +6,7 @@ description:
     Astro.js"
 tags: ["learning", "coding", "astro", "react", "portfolio"]
 image:
-    url: /project-images/cooking-for-engineers.webp
-    alt: Screenshot of a recipe from the website cooking for engineers
+    url: ''
+    alt: '' 
 pubDate: 2024-03-30
 ---
