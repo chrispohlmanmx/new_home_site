@@ -1,0 +1,17 @@
+---
+import { db } from "astro:db";
+
+const media = await db.select().from(Media);
+---
+
+<h2>Media</h2>
+<ul>
+    {
+        media.map(({ name, medium }) => (
+            <li>
+                <p>Name: {name}</p>
+                <p>Medium: {medium}</p>
+            </li>
+        ))
+    }
+</ul>
