@@ -1,9 +1,9 @@
 import { column, defineDb, defineTable, NOW } from "astro:db";
 
-const Media = defineTable({
+const media = defineTable({
     columns: {
         name: column.text(),
-        medium: column.text({ unique: true }),
+        medium: column.text(),
         author: column.text({ optional: true }),
         created: column.date({ default: NOW }),
     },
@@ -11,6 +11,6 @@ const Media = defineTable({
 
 export default defineDb({
     tables: {
-        Media,
+        media,
     },
 });

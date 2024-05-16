@@ -1,7 +1,7 @@
-import { db, Media } from "astro:db";
+import { db, media } from "astro:db";
 
 export default async function () {
-    await db.insert(Media).values([
+    await db.insert(media).values([
         { name: "The Merlin Saga by T.A. Barron", medium: "Books" },
         { name: "The Hobbit", medium: "Books" },
         { name: "The Lord of The Rings Trilogy", medium: "Books" },

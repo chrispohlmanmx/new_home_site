@@ -1,0 +1,35 @@
+---
+import { db, media, or, eq } from "astro:db";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const books = await db.select().from(media).where(eq(media.medium, "Books"));
+const movies = await db.select().from(media).where(eq(media.medium, "Movies"));
+const games = await db
+    .select()
+    .from(media)
+    .where(or(eq(media.medium, "Video Games")));
+const shows = await db.select().from(media).where(eq(media.medium, "TV shows"));
+const pageTitle = "Meaningful Media to me";
+---
+
+<BaseLayout pageTitle={pageTitle}>
+    <h2>Full List of media</h2>
+
+    <h3>Tv Shows</h3>
+    <ul>
+        {shows.map(({ name }) => <li>{name}</li>)}
+    </ul>
+
+    <h3>Movies</h3>
+    <ul>
+        {movies.map(({ name }) => <li>{name}</li>)}
+    </ul>
+    <h3>Books</h3>
+    <ul>
+        {books.map(({ name }) => <li>{name}</li>)}
+    </ul>
+    <h3>Video Games</h3>
+    <ul>
+        {games.map(({ name }) => <li>{name}</li>)}
+    </ul>
+</BaseLayout>
