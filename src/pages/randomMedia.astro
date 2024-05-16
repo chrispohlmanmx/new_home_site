@@ -1,0 +1,37 @@
+---
+import { db, media, or, eq } from "astro:db";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const books = await db.select().from(media).where(eq(media.medium, "Books"));
+const thingsToWatch = await db
+    .select()
+    .from(media)
+    .where(or(eq(media.medium, "TV shows"), eq(media.medium, "Movies")));
+const games = await db
+    .select()
+    .from(media)
+    .where(or(eq(media.medium, "Video Games")));
+
+function getRndInteger(max: number) {
+    return Math.floor(Math.random() * max);
+}
+
+const randomGame = games[getRndInteger(games.length)];
+const randomWatchable = thingsToWatch[getRndInteger(thingsToWatch.length)];
+const randomBook = books[getRndInteger(books.length)];
+
+const pageTitle = "Random Media";
+---
+
+<BaseLayout pageTitle={pageTitle}>
+    <h2>Random thing to watch, play or read</h2>
+
+    <h3>Play</h3>
+    <p>{randomGame.name}</p>
+
+    <h3>Watch</h3>
+    <p>{randomWatchable.name} from the {randomWatchable.medium} list</p>
+
+    <h3>Read</h3>
+    <p>{randomBook.name}</p>
+</BaseLayout>
