@@ -96,22 +96,3 @@ title: "Week of 2025-04-27"
 ## Dinner
 
 -   Salad with leftover chicken
-
-# Groceries to buy
-
--   [x] Whole chicken
--   [x] salad kit x 2
--   [x] Canned black beans x 2
--   [x] Onion x 1
--   [x] broccoli
--   [x] Bagels
--   [x] Vanilla Ice cream
--   [x] Buns/rolls for sandwiches
-
-# Prep
-
--   [x] Spatchcock and salt chicken 📅2025-05-02
--   [x] Pull out pork loin from freezer 📅2025-04-26
--   [x] Pull bacon out of freezer 📅2025-04-27
--   [x] Buy groceries 📅2025-04-28
--   [x] Make pizza dough 📅2025-04-30

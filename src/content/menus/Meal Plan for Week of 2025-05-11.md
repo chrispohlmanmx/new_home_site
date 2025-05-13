@@ -8,7 +8,7 @@ tags:
     - me
     - areas
 created: 2025-05-09 14:50
-title: "Week of 2025-05-12"
+title: "Week of 2025-05-11"
 ---
 
 # Sunday
@@ -102,28 +102,3 @@ Game night
 ## Dinner
 
 -   pork chops with broccoli and potatoes
-
-# Groceries to buy
-
--   [x] Bananas
--   [x] Apples
--   [x] cottage cheese
--   [x] soda for kayla
--   [x] Ice cream
--   [x] Whipped cream
--   [x] American cheese
--   [x] Canned chickpeas
--   [ ] Salad kit
--   [ ] Cauliflower
--   [ ] Milk?
--   [ ] Chips
--   [ ] Crackers
--   [ ] Cheese
--   [ ] Mustard
--   [ ] Pretzels
-
-# Prep
-
--   [ ] Make waffle mix
--   [x] Pull pork out of freezer 📆2025-05-11
--   [ ] Cook chicken for salads 📆2025-05-13

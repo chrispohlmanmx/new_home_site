@@ -97,24 +97,3 @@ while we eat dessert. [[2025-05-09]]
 ## Dinner
 
 -   Hotdogs with grilled cauliflower and carrots
-
-# Groceries to buy
-
--   [x] Carrots
--   [x] alfredo sauce
--   [x] hot dog buns
--   [x] salad kit
--   [x] Condensed milk
--   [x] Cheddar cheese
--   [x] Monterey Jack cheese
--   [x] Cauliflower
-
-# Other shopping for the week
-
--   [x] Bar soap
--   [x] toothpaste
--   [x] frozen chicken tenders
-
-# Prep
-
--   [x] Start No knead bread in the morning on 📅2025-05-08
