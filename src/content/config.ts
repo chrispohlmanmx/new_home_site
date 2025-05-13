@@ -16,6 +16,14 @@ const postsCollection = defineCollection({
     }),
 });
 
+const weeklyMenusCollection = defineCollection({
+    type: "content",
+    schema: z.object({
+        title: z.string(),
+        author: z.string().default("Chris Pohlman"),
+    }),
+});
+
 const projectsCollection = defineCollection({
     type: "content",
     schema: z.object({
@@ -47,4 +55,5 @@ const projectsCollection = defineCollection({
 export const collections = {
     posts: postsCollection,
     projects: projectsCollection,
+    menus: weeklyMenusCollection,
 };

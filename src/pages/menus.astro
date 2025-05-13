@@ -1,0 +1,23 @@
+---
+import "../styles/global.css";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import BlogPost from "../components/BlogPost.astro";
+import { getCollection } from "astro:content";
+const weeklyMenus = await getCollection("menus");
+
+const pageTitle = "Weekly Menus";
+---
+
+<BaseLayout pageTitle={pageTitle}>
+    <p>
+        The home for my blog posts, notes, thoughts, and opinions I may or may
+        not be qualified to share
+    </p>
+    <ul>
+        {
+            weeklyMenus.map((menu) => (
+                <BlogPost url={`/menus/${menu.slug}`} title={menu.data.title} />
+            ))
+        }
+    </ul>
+</BaseLayout>
