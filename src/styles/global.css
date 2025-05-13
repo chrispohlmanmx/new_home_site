@@ -14,6 +14,13 @@ body {
     flex-direction: column;
 }
 
+header {
+    display: flex;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -56,7 +63,7 @@ html.dark {
     top: 5rem;
     left: 48px;
     background-color: #ff9776;
-    display: none;
+    display: flex;
     margin: 0;
 }
 
