@@ -8,7 +8,7 @@ title: Meal Plan for Week of 2025-05-18
 - French Toast [[Authentic Brioche Bread Recipe - Baking With Butter.pdf]]
 - Whipped butter
 ### Lunch
-- salad with chicken
+- leftover veggie mac and cheese
 ### Dinner
 - Chicken
 - Potatoes
