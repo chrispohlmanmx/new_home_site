@@ -8,7 +8,7 @@ tags:
     - me
     - areas
 created: 2025-05-09 14:50
-title: "Week of 2025-05-11"
+title: "Meal Plan for Week of 2025-05-11"
 ---
 
 # Sunday

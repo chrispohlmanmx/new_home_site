@@ -8,7 +8,7 @@ tags:
     - list
     - resources
 created: 2025-04-26 11:53
-title: "Week of 2025-04-27"
+title: "Meal Plan for Week of 2025-04-27"
 ---
 
 # Sunday

@@ -8,7 +8,7 @@ tags:
     - list
     - resources
 created: 2025-05-03 15:35
-title: "Week of 2025-05-03"
+title: "Meal Plan for Week of 2025-05-03"
 ---
 
 -   [x] Go through freezer

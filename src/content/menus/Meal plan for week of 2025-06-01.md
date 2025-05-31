@@ -1,6 +1,6 @@
 ---
 created: 2025-05-13 13:22
-title: Weekly Meal Plan
+title: Meal plan for week of 2025-06-01
 ---
 
 |           | Breakfast                                | Lunch                                    | Dinner                                       |
