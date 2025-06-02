@@ -4,8 +4,8 @@ html {
 }
 
 body {
-    margin: 0 2em;
-    width: 100%;
+    margin: auto;
+    width: 100vw;
     padding: 1rem;
     line-height: 1.5;
     display: flex;
@@ -20,10 +20,6 @@ header {
     justify-content: center;
 }
 
-* {
-    box-sizing: border-box;
-}
-
 h1 {
     margin: 1rem 0;
     font-size: 2.5rem;
@@ -33,9 +29,7 @@ h1 {
 a {
     margin: 0 0.25rem;
 }
-table {
-    border-spacing: 0.25rem;
-}
+
 td {
     padding: 1.25rem;
     border: 1px solid black;
@@ -69,7 +63,7 @@ html.dark {
     top: 5rem;
     left: 48px;
     background-color: #ff9776;
-    display: flex;
+    display: none;
     margin: 0;
 }
 
@@ -94,7 +88,6 @@ html.dark {
 
 @media screen and (min-width: 636px) {
     .nav-links {
-        margin-left: 5em;
         display: block;
         position: static;
         width: auto;
