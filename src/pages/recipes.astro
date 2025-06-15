@@ -1,0 +1,26 @@
+---
+import "../styles/global.css";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import BlogPost from "../components/BlogPost.astro";
+import { getCollection } from "astro:content";
+const recipes = await getCollection("recipes");
+
+const pageTitle = "Recipes";
+---
+
+<BaseLayout pageTitle={pageTitle}>
+    <p>
+        The home for my blog posts, notes, thoughts, and opinions I may or may
+        not be qualified to share
+    </p>
+    <ul>
+        {
+            recipes.map((recipe) => (
+                <BlogPost
+                    url={`/recipes/${recipe.slug}`}
+                    title={recipe.data.name}
+                />
+            ))
+        }
+    </ul>
+</BaseLayout>

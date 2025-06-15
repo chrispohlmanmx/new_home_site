@@ -16,6 +16,16 @@ const postsCollection = defineCollection({
     }),
 });
 
+const recipesCollection = defineCollection({
+    type: "content",
+    schema: z.object({
+        name: z.string(),
+        source: z.string().default("None"),
+        tags: z.array(z.string()),
+        servings: z.string(),
+    }),
+});
+
 const weeklyMenusCollection = defineCollection({
     type: "content",
     schema: z.object({
@@ -56,4 +66,5 @@ export const collections = {
     posts: postsCollection,
     projects: projectsCollection,
     menus: weeklyMenusCollection,
+    recipes: recipesCollection,
 };
