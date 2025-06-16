@@ -1,9 +1,11 @@
 ---
+import _ from "lodash";
 import "../styles/global.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import BlogPost from "../components/BlogPost.astro";
 import { getCollection } from "astro:content";
-const weeklyMenus = await getCollection("menus");
+let menuEntries = await getCollection("menus");
+menuEntries = _.orderBy(menuEntries, "data.title", "desc");
 
 const pageTitle = "Weekly Menus";
 ---
@@ -15,7 +17,7 @@ const pageTitle = "Weekly Menus";
     </p>
     <ul>
         {
-            weeklyMenus.map((menu) => (
+            menuEntries.map((menu) => (
                 <BlogPost url={`/menus/${menu.slug}`} title={menu.data.title} />
             ))
         }

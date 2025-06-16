@@ -8,7 +8,7 @@ tags:
     - list
     - resources
 created: 2025-04-20 13:00
-title: Meal plan for week of 2025-04-20
+title: Meal Plan for Week of 2025-04-20
 ---
 
 # Sunday

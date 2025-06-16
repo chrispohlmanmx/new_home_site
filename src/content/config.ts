@@ -20,7 +20,7 @@ const recipesCollection = defineCollection({
     type: "content",
     schema: z.object({
         name: z.string(),
-        source: z.string().default("None"),
+        source: z.string().default("None").optional(),
         tags: z.array(z.string()),
         servings: z.string(),
     }),
@@ -31,6 +31,7 @@ const weeklyMenusCollection = defineCollection({
     schema: z.object({
         title: z.string(),
         author: z.string().default("Chris Pohlman"),
+        created: z.coerce.date(),
     }),
 });
 
