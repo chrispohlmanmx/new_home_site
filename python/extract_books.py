@@ -1,4 +1,18 @@
+from sqlalchemy.util import b
 import yaml
+import os
+import sys
+
+from dotenv import load_dotenv
+
+from sqlalchemy import create_engine
+from sqlalchemy.orm import Session
+
+from models import Book, Base
+
+def get_book_file_path_list(book_file_directory):
+    book_files = os.listdir(book_file_directory)
+    return book_files
 
 def extract_frontmatter(path):
     with open(path) as f:
@@ -12,5 +26,53 @@ def extract_frontmatter(path):
 
     return yaml.safe_load(frontmatter)
 
+def get_book_data(book_file_directory):
+    base_dir = book_file_directory
+    books = get_book_file_path_list(base_dir)
+    
+    book_data = {}
+
+    for book in books:
+        data = extract_frontmatter(os.path.join(base_dir, book))
+        try:
+            book_title = data['title']
+            if book_title not in book_data:
+                book_data[book_title] = data
+        except:
+            print(f'{book} is not a book')
+    return book_data
+
+def main(book_file_directory):
+    data = get_book_data(book_file_directory)
+
+    load_dotenv()
+
+    TURSO_DATABASE_URL = os.getenv("TURSO_DATABASE_URL")
+    TURSO_AUTH_TOKEN = os.getenv("TURSO_AUTH_TOKEN")
+
+
+    engine = create_engine(
+        "sqlite+libsql:///embedded.db",
+        connect_args={
+            "auth_token": TURSO_AUTH_TOKEN,
+            "sync_url": TURSO_DATABASE_URL,
+        },
+    )
+
+    Base.metadata.create_all(engine) 
+    
+    books = []
+    with Session(engine) as session:
+        for book in data.keys():
+            book = data[book]
+            curr = Book(
+                title=book['title'],
+                status=book['status'],
+                )
+            books.append(curr)
+        session.add_all(books)
+        session.commit()
+
+
 if __name__ == "__main__":
-    print(extract_frontmatter("book.md"))
+    print(main(sys.argv[1]))
