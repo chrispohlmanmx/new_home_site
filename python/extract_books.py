@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
 
-from models import Book, Base
+from models import Book, Base, Author
 
 def get_book_file_path_list(book_file_directory):
     book_files = os.listdir(book_file_directory)
@@ -61,18 +61,44 @@ def main(book_file_directory):
 
     Base.metadata.create_all(engine) 
     
-    books = []
     with Session(engine) as session:
         for book in data.keys():
             book = data[book]
-            curr = Book(
-                title=book['title'],
-                status=book['status'],
-                )
-            books.append(curr)
-        session.add_all(books)
-        session.commit()
+            add_new_book(session, book['author'], book['title'], book['status'])
+
+def add_new_book(session, author_name, book_title, book_status):
+    book = ( 
+        session.query(Book)
+        .join(Author)
+        .filter(Book.title == book_title)
+        .filter(Author.name == author_name) 
+        .one_or_none()
+    )
+    
+    if book is not None:
+            return
+
+    if book is None:
+            book = Book(
+                title=book_title,
+                status=book_status
+            )
+    author = (
+        session.query(Author)
+        .filter(Author.name == author_name)
+        .one_or_none()
+    )
+
+    if author is None:
+            author = Author(name = author_name)
+            session.add(author)
+
+    book.author = author
+    session.add(book)
+
+    session.commit()
 
 
 if __name__ == "__main__":
     print(main(sys.argv[1]))
+
