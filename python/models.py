@@ -14,6 +14,7 @@ class Book(Base):
     status: Mapped[str] = mapped_column(String(30))
     date_finished: Mapped[Optional[str]] = mapped_column(Date)
     cover: Mapped[Optional[str]] = mapped_column(String(255))
+    notes: Mapped[Optional[str]] = mapped_column(String)
     author_id: Mapped[int] = mapped_column(ForeignKey("author.author_id"))
     author: Mapped["Author"] = relationship(back_populates="books")
 

@@ -26,6 +26,19 @@ def extract_frontmatter(path):
 
     return yaml.safe_load(frontmatter)
 
+def extract_notes(path):
+    with open(path) as f:
+        lines = f.readlines()
+        lines = [line.rstrip('\n') for line in lines]
+    try:
+        notes_index = lines.index('# Notes')
+        notes = lines[notes_index+1:]
+        notes = "\n".join(notes)
+    except:
+        notes = None
+
+    return notes 
+
 def get_book_data(book_file_directory):
     base_dir = book_file_directory
     books = get_book_file_path_list(base_dir)
@@ -34,10 +47,12 @@ def get_book_data(book_file_directory):
 
     for book in books:
         data = extract_frontmatter(os.path.join(base_dir, book))
+        notes = extract_notes(os.path.join(base_dir, book))
         try:
             book_title = data['title']
             if book_title not in book_data:
                 book_data[book_title] = data
+                book_data[book_title]['notes'] = notes
         except:
             print(f'{book} is not a book')
     return book_data
@@ -63,14 +78,15 @@ def main(book_file_directory):
     
     with Session(engine) as session:
         for book in data.keys():
+            print(f'processing {book} for db')
             book = data[book]
             try:
                 date_finished = book['date_finished']
             except:
                 date_finished = None
-            add_new_book(session, book['author'], book['title'], book['status'], date_finished, book['cover'])
+            add_new_book(session, book['author'], book['title'], book['status'], date_finished, book['cover'], book['notes'])
 
-def add_new_book(session, author_name, book_title, book_status, date_finished, book_cover):
+def add_new_book(session, author_name, book_title, book_status, date_finished, book_cover, notes):
     book = ( 
         session.query(Book)
         .join(Author)
@@ -88,6 +104,7 @@ def add_new_book(session, author_name, book_title, book_status, date_finished, b
                 status=book_status,
                 date_finished=date_finished,
                 cover=book_cover,
+                notes=notes,
             )
     author = (
         session.query(Author)
