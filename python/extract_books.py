@@ -64,9 +64,13 @@ def main(book_file_directory):
     with Session(engine) as session:
         for book in data.keys():
             book = data[book]
-            add_new_book(session, book['author'], book['title'], book['status'])
+            try:
+                date_finished = book['date_finished']
+            except:
+                date_finished = None
+            add_new_book(session, book['author'], book['title'], book['status'], date_finished, book['cover'])
 
-def add_new_book(session, author_name, book_title, book_status):
+def add_new_book(session, author_name, book_title, book_status, date_finished, book_cover):
     book = ( 
         session.query(Book)
         .join(Author)
@@ -81,7 +85,9 @@ def add_new_book(session, author_name, book_title, book_status):
     if book is None:
             book = Book(
                 title=book_title,
-                status=book_status
+                status=book_status,
+                date_finished=date_finished,
+                cover=book_cover,
             )
     author = (
         session.query(Author)
