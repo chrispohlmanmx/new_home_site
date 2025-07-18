@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
+    "dev": "astro dev --remote",
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.3.1",
+    "@astrojs/db": "^0.15.0",
     "@astrojs/preact": "^3.0.1",
     "@astrojs/rss": "^3.0.0",
     "@vercel/analytics": "^1.5.0",
