@@ -1,17 +1,45 @@
 ---
-import { db, Book } from "astro:db";
+import { db, Book, eq } from "astro:db";
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 const pageTitle = "Bookshelf";
 
-const books = await db.select().from(Book);
+const books = await db.select().from(Book).where(eq(Book.status, "finished"));
 ---
 
+<style>
+	.bookshelf {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 5rem;
+		padding: 5rem;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.book {
+		align-content: end;
+		text-align: center;
+		max-width: 15rem;
+		margin: 0;
+		padding: 0;
+	}
+
+	.book img {
+		box-shadow: 5px 5px 5px black;
+	}
+
+	h3 {
+		margin: 0;
+		padding: 0;
+	}
+</style>
+
 <BaseLayout pageTitle={pageTitle}>
-	<ul>
+	<section class="bookshelf">
 		{
 			books.map((book) => (
-				<div>
+				<div class="book">
 					<img
 						src={book.cover}
 						alt={`Cover of ${book.title}`}
@@ -20,5 +48,5 @@ const books = await db.select().from(Book);
 				</div>
 			))
 		}
-	</ul>
+	</section>
 </BaseLayout>
