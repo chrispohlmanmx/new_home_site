@@ -1,58 +1,75 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
 const { frontmatter } = Astro.props;
+
+const hasImage = Boolean(frontmatter.image);
 ---
 
 <BaseLayout pageTitle={frontmatter.title}>
-    <p><em>{frontmatter.description}</em></p>
-    <p>{frontmatter.pubDate.toString().slice(0, 10)}</p>
+	<main>
+		<p><em>{frontmatter.description}</em></p>
+		<p>{frontmatter.pubDate.toString().slice(0, 10)}</p>
 
-    <p>Written by: {frontmatter.author}</p>
-    <div>
-        <p>Pick of the week image:</p>
-        <img
-            src={frontmatter.image.url}
-            width="300"
-            alt={frontmatter.image.alt}
-        />
-    </div>
+		<p>Written by: {frontmatter.author}</p>
+		{
+			hasImage && (
+				<div>
+					<p>Pick of the week image:</p>
+					<img
+						src={frontmatter.image.url}
+						width="300"
+						alt={frontmatter.image.alt}
+					/>
+				</div>
+			)
+		}
 
-    <div class="tags">
-        {
-            frontmatter.tags.map((tag: any) => (
-                <p class="tag">
-                    <a href={`/tags/${tag}`}>{tag}</a>
-                </p>
-            ))
-        }
-    </div>
+		<div class="tags">
+			{
+				frontmatter.tags.map((tag: any) => (
+					<p class="tag">
+						<a href={`/tags/${tag}`}>
+							{tag}
+						</a>
+					</p>
+				))
+			}
+		</div>
 
-    <slot />
+		<slot />
+	</main>
 </BaseLayout>
 <style>
-    a {
-        color: #00539f;
-    }
+	a {
+		color: #00539f;
+	}
 
-    .tags {
-        display: flex;
-        flex-wrap: wrap;
-    }
+	.tags {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
 
-    .tag {
-        margin: 0.25em;
-        border: dotted 1px #a1a1a1;
-        border-radius: 0.5em;
-        padding: 0.5em 1em;
-        font-size: 1.15em;
-        background-color: #f8fcfd;
-    }
+	.tag {
+		margin: 0.25em;
+		border: dotted 1px #a1a1a1;
+		border-radius: 0.5em;
+		padding: 0.5em 1em;
+		font-size: 1.15em;
+		background-color: #f8fcfd;
+	}
 
-    img {
-        margin: 2rem;
-    }
+	img {
+		margin: 2rem;
+	}
 
-    div {
-        display: flex;
-    }
+	div {
+		display: flex;
+	}
+
+	main {
+		width: 60vw;
+		text-align: left;
+		padding: 2rem;
+	}
 </style>
