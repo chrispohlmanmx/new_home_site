@@ -1,26 +1,32 @@
 ---
+import _ from "lodash";
 import "../styles/global.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import BlogPost from "../components/BlogPost.astro";
 import { getCollection } from "astro:content";
-const publishedPosts = await getCollection("posts", ({ data }) => {
-    let now = new Date();
-    return data.pubDate <= now;
+let publishedPosts = await getCollection("posts", ({ data }) => {
+	let now = new Date();
+	return data.pubDate <= now;
 });
+
+publishedPosts = _.orderBy(publishedPosts, "data.pubDate", "desc");
 
 const pageTitle = "Chrispy garden";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-    <p>
-        The home for my blog posts, notes, thoughts, and opinions I may or may
-        not be qualified to share
-    </p>
-    <ul>
-        {
-            publishedPosts.map((post) => (
-                <BlogPost url={`/posts/${post.slug}`} title={post.data.title} />
-            ))
-        }
-    </ul>
+	<p>
+		The home for my blog posts, notes, thoughts, and opinions I may
+		or may not be qualified to share
+	</p>
+	<ul>
+		{
+			publishedPosts.map((post) => (
+				<BlogPost
+					url={`/posts/${post.slug}`}
+					title={post.data.title}
+				/>
+			))
+		}
+	</ul>
 </BaseLayout>
