@@ -123,5 +123,6 @@ def add_new_book(session, author_name, book_title, book_status, date_finished, b
 
 
 if __name__ == "__main__":
-    print(main(sys.argv[1]))
+    main(sys.argv[1])
+    print("finished")
 
