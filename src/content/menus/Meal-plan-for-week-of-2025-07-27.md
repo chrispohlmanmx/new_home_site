@@ -11,9 +11,9 @@ Rules: At least one vegetable or fruit planned with each meal
 | Sunday    | - oatmeal<br>- peanut butter<br>- banana | Leftover [[Pot Roast]]                    | - Alfredo Stuffed gnocchi                                   |                      |        |
 | Monday    | oatmeal<br>- peanut butter<br>- banana   | <br>Leftover [[Pot Roast]]                | - Hot dogs<br>- apples<br>- carrots<br>- cottage cheese     |                      |        |
 | Tuesday   | oatmeal<br>- peanut butter<br>- banana   | <br>[[avocado-chickpea salad sandwiches]] | - Tacos                                                     |                      |        |
-| Wednesday | oatmeal<br>- peanut butter<br>- banana   | <br>[[avocado-chickpea salad sandwiches]] | - homemade pizza                                            |                      |        |
+| Wednesday | oatmeal<br>- peanut butter<br>- banana   | <br>[[avocado-chickpea salad sandwiches]] | - Salmon<br>- roasted cauliflower<br>- roasted red potatoes |                      |        |
 | Thursday  | oatmeal<br>- peanut butter<br>- banana   | <br>[[avocado-chickpea salad sandwiches]] | - Chicken alfredo<br>- roasted veggies                      |                      |        |
-| Friday    | oatmeal<br>- peanut butter<br>- banana   | <br>[[avocado-chickpea salad sandwiches]] | - Salmon<br>- roasted cauliflower<br>- roasted red potatoes | - Homemade ice cream |        |
+| Friday    | oatmeal<br>- peanut butter<br>- banana   | <br>[[avocado-chickpea salad sandwiches]] | - Homemade pizza                                            | - Homemade ice cream |        |
 | Saturday  | oatmeal<br>- peanut butter<br>- banana   | - leftovers                               | - French toast<br>- eggs<br>- bacon                         |                      |        |
 
  
