@@ -1,14 +1,12 @@
-from sqlalchemy.util import b
-import yaml
 import os
 import sys
 
+import yaml
 from dotenv import load_dotenv
-
-from sqlalchemy import create_engine
+from models import Author, Base, Book
+from sqlalchemy import create_engine, select
 from sqlalchemy.orm import Session
 
-from models import Book, Base, Author
 
 def get_book_file_path_list(book_file_directory):
     book_files = os.listdir(book_file_directory)
@@ -86,42 +84,55 @@ def main(book_file_directory):
                 date_finished = None
             add_new_book(session, book['author'], book['title'], book['status'], date_finished, book['cover'], book['notes'])
 
+
+
+
 def add_new_book(session, author_name, book_title, book_status, date_finished, book_cover, notes):
-    book = ( 
-        session.query(Book)
-        .join(Author)
-        .filter(Book.title == book_title)
-        .filter(Author.name == author_name) 
-        .one_or_none()
+    stmt = (
+        select(Book)
+            .join(Author)
+            .where(Book.title == book_title)
+            .where(Author.name == author_name)
     )
-    
+
+    book = session.scalars(stmt).one_or_none()
+
     if book is not None:
-            return
+        book.title =book_title
+        book.status=book_status
+        book.date_finished=date_finished
+        book.cover=book_cover
+        book.notes=notes
 
     if book is None:
-            book = Book(
+        book = Book(
                 title=book_title,
                 status=book_status,
                 date_finished=date_finished,
                 cover=book_cover,
                 notes=notes,
             )
-    author = (
-        session.query(Author)
-        .filter(Author.name == author_name)
-        .one_or_none()
-    )
 
-    if author is None:
+        stmt = (
+                select(Author)
+                .where(Author.name == str(author_name))
+            )
+
+        author = session.scalars(stmt).one_or_none()
+
+        print(author)
+
+        if author is None:
             author = Author(name = author_name)
             session.add(author)
 
-    book.author = author
-    session.add(book)
+            book.author = author
+        session.add(book)
 
     session.commit()
 
 
 if __name__ == "__main__":
-    print(main(sys.argv[1]))
+    main(sys.argv[1])
+    print('done')
 
