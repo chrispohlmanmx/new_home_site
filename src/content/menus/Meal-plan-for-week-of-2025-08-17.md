@@ -10,10 +10,9 @@ Rules: At least one vegetable or fruit planned with each meal
 | --------- | ---------------------------------------- | ----- | ----------------------------------------------------------------- | ------- | ------ |
 | Sunday    | - oatmeal<br>- peanut butter<br>- banana |       |                                                                   |         |        |
 | Monday    | oatmeal<br>- peanut butter<br>- banana   |       | - Chicken Alfredo                                                 |         |        |
-| Tuesday   | oatmeal<br>- peanut butter<br>- banana   |       | - Blackened Salmon<br>- roasted cauliflower<br>- roasted potatoes |         |        |
-| Wednesday | oatmeal<br>- peanut butter<br>- banana   |       | - Hot dogs<br>- carrots<br>- cottage cheese                       |         |        |
-| Thursday  | oatmeal<br>- peanut butter<br>- banana   |       | - Baked sandwiches<br>- home fries                                |         |        |
-| Friday    | oatmeal<br>- peanut butter<br>- banana   |       | - salad with chicken<br>-                                         |         |        |
+| Tuesday   | oatmeal<br>- peanut butter<br>- banana   |- egg fried rice       | - Blackened Salmon<br>- roasted cauliflower<br>- roasted potatoes |         |        |
+| Wednesday | oatmeal<br>- peanut butter<br>- banana   |- egg fried rice       | - Hot dogs<br>- carrots<br>- cottage cheese                       |         |        |
+| Thursday  | oatmeal<br>- peanut butter<br>- banana   |- egg fried rice       | - Baked sandwiches<br>- home fries                                |         |        |
+| Friday    | oatmeal<br>- peanut butter<br>- banana   |- egg fried rice       | - salad with chicken<br>-                                         |- ice cream         |        |
 | Saturday  | oatmeal<br>- peanut butter<br>- banana   |       | - Pot roast                                                       |         |        |
 
- 
