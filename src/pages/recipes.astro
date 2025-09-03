@@ -3,6 +3,10 @@ import "../styles/global.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import BlogPost from "../components/BlogPost.astro";
 import { getCollection } from "astro:content";
+
+import TestForm from "../components/TestForm.vue";
+import NewRecipe from "@/components/NewRecipe.vue";
+
 const recipes = await getCollection("recipes");
 
 const pageTitle = "Recipes";
@@ -23,4 +27,6 @@ const pageTitle = "Recipes";
             ))
         }
     </ul>
+
+    <NewRecipe client:load />
 </BaseLayout>
