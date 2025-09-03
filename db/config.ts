@@ -35,7 +35,7 @@ const RecipeFeedback = defineTable({
     notes: column.text({ optional: true }),
     createdAt: column.date({ default: NOW }),
     author: column.text(),
-    recipeId: column.text({ references: () => Recipe.columns.recipeId }),
+    recipeId: column.number({ references: () => Recipe.columns.recipeId }),
 
   }
 })
