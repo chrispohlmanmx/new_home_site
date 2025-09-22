@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { ref } from "vue";
+import Ingredient from "./Ingredient.vue";
 
 const units = {
     grams: "g",
@@ -34,15 +35,15 @@ const formSchema = toTypedSchema(
                 name: z.string().min(2).max(50),
                 quantity: z.number(),
                 unit: z.enum(units),
-            })
+            }),
         ),
         instructions: z.array(
             z.object({
                 stepNumber: z.int().positive(),
                 instruction: z.string(),
-            })
+            }),
         ),
-    })
+    }),
 );
 
 const recipe = ref({});
@@ -63,11 +64,8 @@ const onSubmit = form.handleSubmit((values) => {
             <FormItem>
                 <FormLabel>Recipe Name/Title</FormLabel>
                 <FormControl>
-                    <Input
-                        type="text"
-                        placeholder="Pepperoni Pizza"
-                        v-bind="componentField"
-                    />
+                    <Input type="text" placeholder="Pepperoni Pizza"
+                           v-bind="componentField" />
                 </FormControl>
                 <FormDescription>
                     This is the name or title of the recipe
@@ -80,11 +78,8 @@ const onSubmit = form.handleSubmit((values) => {
             <FormItem>
                 <FormLabel>Recipe Source</FormLabel>
                 <FormControl>
-                    <Input
-                        type="url"
-                        placeholder="example@example.com/recipe"
-                        v-bind="componentField"
-                    />
+                    <Input type="url" placeholder="example@example.com/recipe"
+                           v-bind="componentField" />
                 </FormControl>
                 <FormDescription> Link to the original recipe </FormDescription>
                 <FormMessage />
@@ -95,11 +90,8 @@ const onSubmit = form.handleSubmit((values) => {
             <FormItem>
                 <FormLabel>Servings</FormLabel>
                 <FormControl>
-                    <Input
-                        type="number"
-                        placeholder="4"
-                        v-bind="componentField"
-                    />
+                    <Input type="number" placeholder="4"
+                           v-bind="componentField" />
                 </FormControl>
                 <FormDescription>Number of servings</FormDescription>
                 <FormMessage />
@@ -107,93 +99,34 @@ const onSubmit = form.handleSubmit((values) => {
         </FormField>
 
         <div id="ingredients">
-            <div id="ingredient-input">
-                <FormField
-                    v-slot="{ componentField }"
-                    name="ingredients[0].name"
-                >
-                    <FormItem>
-                        <FormLabel>Ingredient</FormLabel>
-                        <FormControl>
-                            <Input
-                                type="text"
-                                placeholder="Salt"
-                                v-bind="componentField"
-                            />
-                        </FormControl>
-                        <FormDescription> Name of ingredient</FormDescription>
-                        <FormMessage />
-                    </FormItem>
-                </FormField>
-                <FormField
-                    v-slot="{ componentField }"
-                    name="ingredients[0].quantity"
-                >
-                    <FormItem>
-                        <FormLabel>Amount</FormLabel>
-                        <FormControl>
-                            <Input
-                                type="number"
-                                placeholder="1"
-                                v-bind="componentField"
-                            />
-                        </FormControl>
-                        <FormDescription>Amount of ingredient</FormDescription>
-                        <FormMessage />
-                    </FormItem>
-                </FormField>
+            <Ingredient />
 
-                <FormField
-                    v-slot="{ componentField }"
-                    name="ingredients[0].unit"
-                >
-                    <FormItem>
-                        <FormLabel>Amount</FormLabel>
-                        <FormControl>
-                            <Input
-                                type="text"
-                                placeholder="oz"
-                                v-bind="componentField"
-                            />
-                        </FormControl>
-                        <FormDescription
-                            >unit the quantity is measured in</FormDescription
-                        >
-                        <FormMessage />
-                    </FormItem>
-                </FormField>
-            </div>
+            <Ingredient />
+            <Ingredient />
+            <Ingredient />
+            <Ingredient />
+            <Ingredient />
         </div>
         <div id="instructions">
-            <div id="instruction-input">
-                <FormField
-                    v-slot="{ componentField }"
-                    name="instructions[0].stepNumber"
-                >
+            <div id="instruction-input" class="flex">
+                <FormField v-slot="{ componentField }"
+                           name="instructions[0].stepNumber">
                     <FormItem>
                         <FormLabel>Step</FormLabel>
                         <FormControl>
-                            <Input
-                                type="number"
-                                placeholder="1"
-                                v-bind="componentField"
-                            />
+                            <Input type="number" placeholder="1"
+                                   v-bind="componentField" />
                         </FormControl>
                         <FormMessage />
                     </FormItem>
                 </FormField>
-                <FormField
-                    v-slot="{ componentField }"
-                    name="instructions[0].instruction"
-                >
+                <FormField v-slot="{ componentField }"
+                           name="instructions[0].instruction">
                     <FormItem>
                         <FormLabel>Instruction</FormLabel>
                         <FormControl>
-                            <Input
-                                type="text"
-                                placeholder="Mix ingredients"
-                                v-bind="componentField"
-                            />
+                            <Input type="text" placeholder="Mix ingredients"
+                                   v-bind="componentField" />
                         </FormControl>
                         <FormMessage />
                     </FormItem>
