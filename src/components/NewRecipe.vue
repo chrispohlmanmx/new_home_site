@@ -15,6 +15,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { ref } from "vue";
 import Ingredient from "./Ingredient.vue";
+import RecipeInstructionInput from "./RecipeInstructionInput.vue";
 
 const units = {
     grams: "g",
@@ -39,7 +40,6 @@ const formSchema = toTypedSchema(
         ),
         instructions: z.array(
             z.object({
-                stepNumber: z.int().positive(),
                 instruction: z.string(),
             }),
         ),
@@ -52,14 +52,15 @@ const form = useForm({
 
 const onSubmit = form.handleSubmit((values) => {
     console.log("form submitted", values);
+
 });
 
 const ingredientNumber = ref(1)
+const instructionNumber = ref(1)
 
 
 function addIngredient() {
     ingredientNumber.value++
-    console.log('add ingredient clicked')
 }
 function removeIngredient() {
     if (ingredientNumber.value > 1) {
@@ -69,7 +70,18 @@ function removeIngredient() {
         console.log('must have at least one ingredient')
     }
 
-    console.log('remove ingredient clicked')
+}
+
+function addInstruction() {
+    instructionNumber.value++
+}
+function removeInstruction() {
+    if (instructionNumber.value > 1) {
+        instructionNumber.value--
+    } else {
+        //should maybe throw an actual error here?
+        console.log('must have at least one instruction')
+    }
 }
 </script>
 
@@ -119,31 +131,11 @@ function removeIngredient() {
                         @remove-ingredient-clicked="removeIngredient" />
         </div>
 
-        <div id="instructions">
-            <div id="instruction-input" class="flex">
-                <FormField v-slot="{ componentField }"
-                           name="instructions[0].stepNumber">
-                    <FormItem>
-                        <FormLabel>Step</FormLabel>
-                        <FormControl>
-                            <Input type="number" placeholder="1"
-                                   v-bind="componentField" />
-                        </FormControl>
-                        <FormMessage />
-                    </FormItem>
-                </FormField>
-                <FormField v-slot="{ componentField }"
-                           name="instructions[0].instruction">
-                    <FormItem>
-                        <FormLabel>Instruction</FormLabel>
-                        <FormControl>
-                            <Input type="text" placeholder="Mix ingredients"
-                                   v-bind="componentField" />
-                        </FormControl>
-                        <FormMessage />
-                    </FormItem>
-                </FormField>
-            </div>
+
+        <div id="instructions" v-for="i in instructionNumber">
+            <RecipeInstructionInput :instructionNumber="i - 1"
+                                    @add-instruction-clicked="addInstruction"
+                                    @remove-instruction-clicked="removeInstruction" />
         </div>
 
         <Button type="submit">Submit</Button>
