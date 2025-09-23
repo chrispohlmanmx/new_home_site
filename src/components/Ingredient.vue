@@ -8,6 +8,11 @@ import {
     FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+
+import { Plus } from "lucide-vue-next"
+
+const props = defineProps(['ingredient_number', 'ingredients'])
 
 const units = {
     grams: "g",
@@ -22,9 +27,10 @@ const units = {
 </script>
 
 <template>
-    <div id="ingredient-input" class="flex gap-4">
+    <div id="ingredient-input"
+         class="flex flex-wrap p-4 m-2 gap-4 justify-end content-end">
 
-        <FormField v-slot="{ componentField }" name="ingredients[0].quantity"
+        <FormField v-slot="{ componentField }" :name="ingredient_number"
                    class="w-1/6">
             <FormItem>
                 <FormLabel>Amount</FormLabel>
@@ -36,7 +42,7 @@ const units = {
             </FormItem>
         </FormField>
 
-        <FormField v-slot="{ componentField }" name="ingredients[0].unit">
+        <FormField v-slot="{ componentField }" name="unit">
             <FormItem>
                 <FormLabel>Units</FormLabel>
                 <FormControl>
@@ -46,7 +52,7 @@ const units = {
                 <FormMessage />
             </FormItem>
         </FormField>
-        <FormField v-slot="{ componentField }" name="ingredients[0].name">
+        <FormField v-slot="{ componentField }" name="name">
             <FormItem>
                 <FormLabel>Ingredient</FormLabel>
                 <FormControl>
@@ -56,5 +62,14 @@ const units = {
                 <FormMessage />
             </FormItem>
         </FormField>
+        <FormItem>
+
+            <Button variant="outline" size="icon"
+                    @click="$emit('addIngredientClicked')"
+                    class="self-center justify-self-center">
+                <Plus />
+            </Button>
+
+        </FormItem>
     </div>
 </template>

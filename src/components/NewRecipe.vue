@@ -46,7 +46,20 @@ const formSchema = toTypedSchema(
     }),
 );
 
-const recipe = ref({});
+const recipe = ref({
+    name: '',
+    source: '',
+    servings: -1,
+    ingredients: [{
+        name: '',
+        quantity: -1,
+        unit: 'tsp'
+    },],
+    instructions: [{
+        stepNumber: -1,
+        instruction: ''
+    }]
+});
 
 const form = useForm({
     validationSchema: formSchema,
@@ -54,8 +67,17 @@ const form = useForm({
 
 const onSubmit = form.handleSubmit((values) => {
     console.log("form submitted", values);
-    recipe.value = values;
 });
+
+
+function addIngredient() {
+    recipe.value.ingredients.push({
+        name: '',
+        quantity: -1,
+        unit: 'tsp'
+    })
+    console.log('add ingredient clicked')
+}
 </script>
 
 <template>
@@ -78,7 +100,7 @@ const onSubmit = form.handleSubmit((values) => {
             <FormItem>
                 <FormLabel>Recipe Source</FormLabel>
                 <FormControl>
-                    <Input type="url" placeholder="example@example.com/recipe"
+                    <Input type="url" placeholder="example.com/recipe"
                            v-bind="componentField" />
                 </FormControl>
                 <FormDescription> Link to the original recipe </FormDescription>
@@ -98,14 +120,10 @@ const onSubmit = form.handleSubmit((values) => {
             </FormItem>
         </FormField>
 
-        <div id="ingredients">
-            <Ingredient />
+        <div id="ingredients" v-for="ingredient in recipe.ingredients">
+            <Ingredient :ingredients="recipe.ingredients" ingredient_number="0"
+                        @add-ingredient-clicked.once="addIngredient" />
 
-            <Ingredient />
-            <Ingredient />
-            <Ingredient />
-            <Ingredient />
-            <Ingredient />
         </div>
         <div id="instructions">
             <div id="instruction-input" class="flex">
