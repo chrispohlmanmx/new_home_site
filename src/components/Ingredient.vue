@@ -10,7 +10,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
-import { Plus } from "lucide-vue-next"
+import { Plus, Minus } from "lucide-vue-next"
 
 const { ingredientNumber } = defineProps(['ingredientNumber'])
 
@@ -65,14 +65,18 @@ const units = {
                 <FormMessage />
             </FormItem>
         </FormField>
-        <FormItem>
 
-            <Button variant="outline" size="icon"
-                    @click="$emit('addIngredientClicked')"
-                    class="self-center justify-self-center">
-                <Plus />
-            </Button>
+        <Button variant="outline" size="icon"
+                @click="$emit('addIngredientClicked')"
+                class="self-center justify-self-center">
+            <Plus />
+        </Button>
+        <Button variant="outline" size="icon"
+                @click="$emit('removeIngredientClicked')"
+                class="self-center justify-self-center">
+            <Minus />
+        </Button>
 
-        </FormItem>
+
     </div>
 </template>

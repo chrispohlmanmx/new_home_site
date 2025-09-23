@@ -61,6 +61,16 @@ function addIngredient() {
     ingredientNumber.value++
     console.log('add ingredient clicked')
 }
+function removeIngredient() {
+    if (ingredientNumber.value > 1) {
+        ingredientNumber.value--
+    } else {
+        //should maybe throw an actual error here?
+        console.log('must have at least one ingredient')
+    }
+
+    console.log('remove ingredient clicked')
+}
 </script>
 
 <template>
@@ -105,7 +115,8 @@ function addIngredient() {
 
         <div id="ingredients" v-for="i in ingredientNumber">
             <Ingredient :ingredientNumber="i - 1"
-                        @add-ingredient-clicked.once="addIngredient" />
+                        @add-ingredient-clicked="addIngredient"
+                        @remove-ingredient-clicked="removeIngredient" />
         </div>
 
         <div id="instructions">
