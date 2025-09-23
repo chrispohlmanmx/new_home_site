@@ -27,7 +27,7 @@ const units = {
 
 const formSchema = toTypedSchema(
     z.object({
-        name: z.string().min(2),
+        title: z.string().min(2),
         source: z.url().optional(),
         servings: z.int().positive(),
         ingredients: z.array(
@@ -46,21 +46,6 @@ const formSchema = toTypedSchema(
     }),
 );
 
-const recipe = ref({
-    name: '',
-    source: '',
-    servings: -1,
-    ingredients: [{
-        name: '',
-        quantity: -1,
-        unit: 'tsp'
-    },],
-    instructions: [{
-        stepNumber: -1,
-        instruction: ''
-    }]
-});
-
 const form = useForm({
     validationSchema: formSchema,
 });
@@ -69,20 +54,18 @@ const onSubmit = form.handleSubmit((values) => {
     console.log("form submitted", values);
 });
 
+const ingredientNumber = ref(1)
+
 
 function addIngredient() {
-    recipe.value.ingredients.push({
-        name: '',
-        quantity: -1,
-        unit: 'tsp'
-    })
+    ingredientNumber.value++
     console.log('add ingredient clicked')
 }
 </script>
 
 <template>
     <form @submit="onSubmit">
-        <FormField v-slot="{ componentField }" name="name">
+        <FormField v-slot="{ componentField }" name="title">
             <FormItem>
                 <FormLabel>Recipe Name/Title</FormLabel>
                 <FormControl>
@@ -120,11 +103,11 @@ function addIngredient() {
             </FormItem>
         </FormField>
 
-        <div id="ingredients" v-for="ingredient in recipe.ingredients">
-            <Ingredient :ingredients="recipe.ingredients" ingredient_number="0"
+        <div id="ingredients" v-for="i in ingredientNumber">
+            <Ingredient :ingredientNumber="i - 1"
                         @add-ingredient-clicked.once="addIngredient" />
-
         </div>
+
         <div id="instructions">
             <div id="instruction-input" class="flex">
                 <FormField v-slot="{ componentField }"
