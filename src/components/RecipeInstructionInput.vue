@@ -33,6 +33,7 @@ const instruction = `instructions[${instructionNumber}].instruction`
                 <FormMessage />
             </FormItem>
         </FormField>
+
         <Button variant="outline" size="icon"
                 @click="$emit('addInstructionClicked')"
                 class="self-center justify-self-center">

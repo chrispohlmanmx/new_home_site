@@ -22,7 +22,7 @@ const Author = defineTable({
 const Recipe = defineTable({
   columns: {
     recipeId: column.number({ primaryKey: true }),
-    name: column.text(),
+    title: column.text(),
     source: column.text({ optional: true, unique: true }),
     servings: column.number(),
     createdAt: column.date({ default: NOW }),

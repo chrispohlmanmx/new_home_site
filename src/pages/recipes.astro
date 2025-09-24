@@ -4,10 +4,11 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import BlogPost from "../components/BlogPost.astro";
 import { getCollection } from "astro:content";
 
-import TestForm from "../components/TestForm.vue";
 import NewRecipe from "@/components/NewRecipe.vue";
+import { db, Recipe } from "astro:db";
 
 const recipes = await getCollection("recipes");
+const db_recipes = await db.select().from(Recipe);
 
 const pageTitle = "Recipes";
 ---
@@ -26,6 +27,10 @@ const pageTitle = "Recipes";
                 />
             ))
         }
+    </ul>
+
+    <ul>
+        {db_recipes.map((recipe) => <li>{recipe.title}</li>)}
     </ul>
 
     <NewRecipe client:load />

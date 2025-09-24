@@ -17,6 +17,8 @@ import { ref } from "vue";
 import Ingredient from "./Ingredient.vue";
 import RecipeInstructionInput from "./RecipeInstructionInput.vue";
 
+import { actions } from "astro:actions";
+
 const units = {
     grams: "g",
     ounces: "oz",
@@ -50,9 +52,15 @@ const form = useForm({
     validationSchema: formSchema,
 });
 
-const onSubmit = form.handleSubmit((values) => {
+const onSubmit = form.handleSubmit(async (values) => {
     console.log("form submitted", values);
 
+    const { data, error } = await actions.addRecipe(values)
+
+    console.log(error)
+    console.log(data)
+
+    window.location.reload();
 });
 
 const ingredientNumber = ref(1)
