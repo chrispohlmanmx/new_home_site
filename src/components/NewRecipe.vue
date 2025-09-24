@@ -36,7 +36,7 @@ const formSchema = toTypedSchema(
         ingredients: z.array(
             z.object({
                 name: z.string().min(2).max(50),
-                quantity: z.number(),
+                quantity: z.coerce.number(),
                 unit: z.enum(units),
             }),
         ),

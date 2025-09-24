@@ -7,6 +7,14 @@ import {
     FormLabel,
     FormMessage,
 } from "@/components/ui/form";
+import {
+    Select,
+    SelectContent,
+    SelectGroup,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+} from "@/components/ui/select"
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
@@ -25,6 +33,7 @@ const units = {
     teaspoons: "tsp",
     cups: "cup",
     pounds: "lb",
+    each: 'each'
 } as const;
 
 
@@ -38,7 +47,7 @@ const units = {
             <FormItem>
                 <FormLabel>Amount</FormLabel>
                 <FormControl>
-                    <Input type="number" placeholder="1"
+                    <Input type="text" placeholder="1"
                            v-bind="componentField" />
                 </FormControl>
                 <FormMessage />
@@ -48,10 +57,21 @@ const units = {
         <FormField v-slot="{ componentField }" :name="unit">
             <FormItem>
                 <FormLabel>Units</FormLabel>
-                <FormControl>
-                    <Input type="text" placeholder="oz"
-                           v-bind="componentField" />
-                </FormControl>
+                <Select v-bind="componentField">
+                    <FormControl>
+                        <SelectTrigger>
+                            <SelectValue placeholder="oz" />
+                        </SelectTrigger>
+                    </FormControl>
+                    <SelectContent>
+                        <SelectGroup v-for="unit in units">
+                            <SelectItem :value="unit">
+                                {{ unit }}
+                            </SelectItem>
+                        </SelectGroup>
+                    </SelectContent>
+
+                </Select>
                 <FormMessage />
             </FormItem>
         </FormField>
